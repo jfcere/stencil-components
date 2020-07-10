@@ -1,0 +1,66 @@
+@import '../../scss/theme';
+
+my-button {
+  button {
+    border: 0;
+    border-radius: 4px;
+    font-family: $font-family;
+    font-weight: 500;
+    padding: 8px 16px;
+    transition: background-color 300ms ease-out, box-shadow 300ms ease-out;
+
+    &:focus {
+      outline: none;
+    }
+
+    &:disabled {
+      background-color: $disabled-bg-color;
+      color: $disabled-text-color;
+      cursor: not-allowed;
+    }
+
+    &:not(:disabled) {
+      cursor: pointer;
+
+      &.default {
+        background-color: $default-bg-color;
+        box-shadow: inset 0 0 0 1px darken($default-bg-color, 35%);
+        color: $default-text-color;
+
+        &:focus {
+          box-shadow: inset 0 0 0 1px darken($default-bg-color, 35%), 0 0 0 3px darken($default-bg-color, 15%);
+        }
+
+        &:hover {
+          background-color: darken($default-bg-color, 10%);
+        }
+      }
+
+      &.accent {
+        background-color: $accent-bg-color;
+        color: $accent-text-color;
+
+        &:focus {
+          box-shadow: 0 0 0 3px lighten($accent-bg-color, 35%);
+        }
+
+        &:hover {
+          background-color: darken($accent-bg-color, 10%);
+        }
+      }
+
+      &.primary {
+        background-color: $primary-bg-color;
+        color: $primary-text-color;
+
+        &:focus {
+          box-shadow: 0 0 0 3px lighten($primary-bg-color, 35%);
+        }
+
+        &:hover {
+          background-color: darken($primary-bg-color, 10%);
+        }
+      }
+    }
+  }
+}

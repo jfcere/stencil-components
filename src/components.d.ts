@@ -5,57 +5,54 @@
  * It contains typing information for all components that exist in this project.
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
+import { ButtonColor } from "./components/my-button/my-button";
 export namespace Components {
-    interface MyComponent {
+    interface MyButton {
         /**
-          * The first name
+          * The button color
          */
-        "first": string;
+        "color": ButtonColor;
         /**
-          * The last name
+          * To disable button
          */
-        "last": string;
-        /**
-          * The middle name
-         */
-        "middle": string;
+        "disabled": boolean;
     }
 }
 declare global {
-    interface HTMLMyComponentElement extends Components.MyComponent, HTMLStencilElement {
+    interface HTMLMyButtonElement extends Components.MyButton, HTMLStencilElement {
     }
-    var HTMLMyComponentElement: {
-        prototype: HTMLMyComponentElement;
-        new (): HTMLMyComponentElement;
+    var HTMLMyButtonElement: {
+        prototype: HTMLMyButtonElement;
+        new (): HTMLMyButtonElement;
     };
     interface HTMLElementTagNameMap {
-        "my-component": HTMLMyComponentElement;
+        "my-button": HTMLMyButtonElement;
     }
 }
 declare namespace LocalJSX {
-    interface MyComponent {
+    interface MyButton {
         /**
-          * The first name
+          * The button color
          */
-        "first"?: string;
+        "color"?: ButtonColor;
         /**
-          * The last name
+          * To disable button
          */
-        "last"?: string;
+        "disabled"?: boolean;
         /**
-          * The middle name
+          * Emitted when button is clicked
          */
-        "middle"?: string;
+        "onOnClick"?: (event: CustomEvent<void>) => void;
     }
     interface IntrinsicElements {
-        "my-component": MyComponent;
+        "my-button": MyButton;
     }
 }
 export { LocalJSX as JSX };
 declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
-            "my-component": LocalJSX.MyComponent & JSXBase.HTMLAttributes<HTMLMyComponentElement>;
+            "my-button": LocalJSX.MyButton & JSXBase.HTMLAttributes<HTMLMyButtonElement>;
         }
     }
 }

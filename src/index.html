@@ -8,10 +8,34 @@
   <script type="module" src="/build/stencil-sample.esm.js"></script>
   <script nomodule src="/build/stencil-sample.js"></script>
 
+  <style>
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      margin: 32px auto;
+      max-width: 800px;
+      text-align: center;
+    }
+  </style>
 </head>
 <body>
+  <h2>my-button</h2>
+  <p>
+    <my-button color="default" onClick="javascript: alert('default clicked')">Default</my-button>
+    <my-button color="primary" onClick="javascript: alert('primary clicked')">Primary</my-button>
+    <my-button color="accent" onClick="javascript: alert('accent clicked')">Accent</my-button>
+  </p>
+  <p>
+    <input type="checkbox" id="chk-disabled" value="">
+    <label for="chk-disabled">Disabled</label>
+  </p>
 
-  <my-component first="Stencil" last="'Don't call me a framework' JS"></my-component>
+  <script>
+    const buttons = document.querySelectorAll('my-button');
+    const checkbox = document.querySelector('#chk-disabled');
 
+    checkbox.addEventListener('change', () => {
+      buttons.forEach(button => button.setAttribute('disabled', `${checkbox.checked}`));
+    });
+  </script>
 </body>
 </html>
