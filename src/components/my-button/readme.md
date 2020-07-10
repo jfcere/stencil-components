@@ -1,6 +1,8 @@
 # my-button
 
-
+```html
+<my-button color="primary" onClick="onButtonClick()" disabled="true">Example Text</my-button>
+```
 
 <!-- Auto Generated Below -->
 
