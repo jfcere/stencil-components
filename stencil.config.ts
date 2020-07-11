@@ -2,7 +2,7 @@ import { Config } from '@stencil/core';
 import { sass } from '@stencil/sass';
 
 export const config: Config = {
-  namespace: 'stencil-sample',
+  namespace: 'stencil-components',
   taskQueue: 'async',
   outputTargets: [
     {

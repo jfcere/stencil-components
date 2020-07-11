@@ -1,8 +1,8 @@
 {
-  "name": "stencil-sample",
+  "name": "stencil-components",
   "version": "0.0.1",
   "description": "Sample repository using Stencil to build Web Components",
-  "homepage": "https://github.com/jfcere/stencil-sample",
+  "homepage": "https://github.com/jfcere/stencil-components",
   "license": "MIT",
   "author": {
     "name": "Jean-Francois Cere",
@@ -10,7 +10,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/jfcere/stencil-sample"
+    "url": "https://github.com/jfcere/stencil-components"
   },
   "keywords": [
     "stencil",
@@ -23,12 +23,13 @@
   "types": "dist/types/index.d.ts",
   "collection": "dist/collection/collection-manifest.json",
   "collection:main": "dist/collection/index.js",
-  "unpkg": "dist/stencil-sample/stencil-sample.js",
+  "unpkg": "dist/stencil-components/stencil-components.js",
   "files": [
     "dist/",
     "loader/"
   ],
   "scripts": {
+    "clean": "rimraf dist loader *.tgz",
     "build": "stencil build --docs",
     "start": "stencil build --dev --watch --serve",
     "test": "stencil test --spec --e2e",
@@ -42,6 +43,7 @@
     "@types/puppeteer": "2.0.1",
     "jest": "26.0.1",
     "jest-cli": "26.0.1",
-    "puppeteer": "2.1.1"
+    "puppeteer": "2.1.1",
+    "rimraf": "^3.0.2"
   }
 }

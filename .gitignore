@@ -12,6 +12,7 @@ log.txt
 package-lock.json
 *.sublime-project
 *.sublime-workspace
+*.tgz
 !yarn.lock
 
 .stencil/
