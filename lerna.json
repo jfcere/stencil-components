@@ -1,0 +1,8 @@
+{
+  "packages": [
+    "stencil-components-angular",
+    "stencil-components-react",
+    "stencil-components-web"
+  ],
+  "version": "independent"
+}

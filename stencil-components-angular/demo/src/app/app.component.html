@@ -1,0 +1,10 @@
+<h2>my-button</h2>
+<p>
+  <my-button color="default" (onClick)="onClick($event)" [disabled]="disabled">Default</my-button>
+  <my-button color="primary" (onClick)="onClick($event)" [disabled]="disabled">Primary</my-button>
+  <my-button color="accent" (onClick)="onClick($event)" [disabled]="disabled">Accent</my-button>
+</p>
+<p>
+  <input type="checkbox" id="chk-disabled" [checked]="disabled" (change)="disabled = !disabled">
+  <label for="chk-disabled">Disabled</label>
+</p>
