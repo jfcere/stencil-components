@@ -8,16 +8,13 @@
   "files": [],
   "references": [
     {
-      "path": "./tsconfig.app.json"
+      "path": "./demo/tsconfig.app.json"
     },
     {
-      "path": "./tsconfig.spec.json"
+      "path": "./lib/tsconfig.lib.json"
     },
     {
-      "path": "./projects/lib/tsconfig.lib.json"
-    },
-    {
-      "path": "./projects/lib/tsconfig.spec.json"
+      "path": "./lib/tsconfig.spec.json"
     }
 ]
 }
