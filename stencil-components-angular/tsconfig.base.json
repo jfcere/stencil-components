@@ -16,10 +16,7 @@
       "dom"
     ],
     "paths": {
-      "lib": [
-        "dist/lib/lib",
-        "dist/lib"
-      ]
+      "stencil-components-angular": ["lib/src"]
     }
   }
 }

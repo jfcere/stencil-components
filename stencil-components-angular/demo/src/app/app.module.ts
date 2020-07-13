@@ -1,6 +1,7 @@
-import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
+import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
+import { StencilComponentsModule } from 'stencil-components-angular';
 
 import { AppComponent } from './app.component';
 
@@ -11,9 +12,9 @@ import { AppComponent } from './app.component';
   imports: [
     BrowserModule,
     FormsModule,
+    StencilComponentsModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
-  schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })
 export class AppModule { }
